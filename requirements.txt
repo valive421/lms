@@ -1,5 +1,6 @@
 Django
 gunicorn
 psycopg2-binary
-dotenv
+python-dotenv
+
 
