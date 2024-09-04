@@ -3,5 +3,7 @@ gunicorn
 psycopg2-binary
 python-dotenv
 dj-database-url
+django-storages
+
 
 
