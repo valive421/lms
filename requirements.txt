@@ -1,5 +1,5 @@
-Django==5.1.1
-gunicorn==23.0.0
-psycopg2-binary==2.9.6
-dotenv==0.0.5
+Django
+gunicorn
+psycopg2-binary
+dotenv
 
