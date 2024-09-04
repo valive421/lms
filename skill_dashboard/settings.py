@@ -1,5 +1,8 @@
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'trrLGX13im/hKL4NWngchGc9zhYIAzNr8NtQnzYg'  # Replace with a real secret key
@@ -74,11 +77,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
-AWS_ACCESS_KEY_ID = 'AKIAR7HWYD6H73KR466I'
-AWS_SECRET_ACCESS_KEY = 'S8okCLvupMa7De5MnADvQ7RIGFZrmIwgSypBkNsw'
-AWS_STORAGE_BUCKET_NAME = 'media001i'
-AWS_S3_REGION_NAME = 'eu-north-1'  # e.g., 'us-west-1'
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+import os
+
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
