@@ -1,0 +1,1 @@
+gunicorn skill_dashboard.wsgi --log-file -
